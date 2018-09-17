@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator;
 
 class Weatherapi extends Controller
 {
@@ -11,20 +10,6 @@ class Weatherapi extends Controller
         return view('welcome');
     }
     public function getdata(Request $request){
-
-        $validator = Validator::make($request->all(), [
-            $request->input('town') => 'required',
-            $request->input('key') => 'required',
-        ]);
-
-//        if(request()->ajax()){
-//
-//
-//            }
-//        if ($validator->fails()) {
-//            return "error";
-//        }else{
-            //$data = json_decode(file_get_contents("https://samples.openweathermap.org/data/2.5/forecast?q=&appid=b1b15e88fa797225412429c1c50c122a1​"));
 
         $data = "https://api.openweathermap.org/data/2.5/forecast?q=".$request->input('town')."&appid=".$request->input('key');
         $data = file_get_contents($data);
