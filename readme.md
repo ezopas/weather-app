@@ -25,7 +25,7 @@ da0d769e98
 - The submit button is green on right side.
 - The form’s data should be submitted via AJAX to back end system.
 - Backend system should call to external data provider.
-- The response of external data should be passed to front-end system as general data
+- The response of external data should be passed to front-end system
 format.
 - The possibility to add other providers should be investigated.
 - Each new city should be shown as new tab with data inside.
